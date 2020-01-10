@@ -1,0 +1,19 @@
+cd /mnt/sos
+repo init -u git://github.com/SuperiorOS/manifest.git -b ten --depth=1
+repo sync -c -f --force-sync --no-tags --no-clone-bundle -j$(nproc --all) --optimized-fetch --prune
+git clone https://github.com/hbarsaiyan/android_device_motorola_falcon -b superior device/motorola/falcon
+git clone https://github.com/hbarsaiyan/android_device_motorola_msm8226-common -b aex device/motorola/msm8226-common
+git clone https://github.com/hbarsaiyan/proprietary_vendor_motorola vendor/motorola
+git clone https://github.com/RenanQueiroz/android_kernel_motorola_msm8226 kernel/motorola/msm8226
+cd /mnt/sos
+ccache -M 30G
+export USE_CCACHE=1
+export CCACHE_EXEC=$(command -v ccache)
+cd /mnt/sos
+source build/envsetup.sh
+lunch superior_falcon-userdebug
+mka bacon -j6
+cp /mnt/sos/out/product/target/falcon/SuperiorOS-Phoenix-falcon-UNOFFICIAL*.zip /mnt/superior_falcon.zip
+rclone copy /mnt/superior_falcon.zip drive:drive
+rclone copy /mnt/sos/out/product/target/falcon/SuperiorOS-Phoenix-falcon-UNOFFICIAL*.zip
+sudo shutdown
