@@ -1,4 +1,4 @@
-repo init -u https://github.com/AOSPA-8916/manifest -b quartz --depth=1
+repo init -u https://github.com/hbarsaiyan/manifest -b quartz --depth=1
 repo sync -c -f --force-sync --no-tags --no-clone-bundle -j$(nproc --all) --optimized-fetch
 cd vendor
 rm -rf pa
