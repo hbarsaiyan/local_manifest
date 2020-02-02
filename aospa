@@ -1,0 +1,11 @@
+repo init -u https://github.com/AOSPA-8916/manifest -b quartz --depth=1
+repo sync -c -f --force-sync --no-tags --no-clone-bundle -j$(nproc --all) --optimized-fetch
+cd vendor
+rm -rf pa
+git clone https://github.com/hbarsaiyan/android_vendor_pa pa
+cd ~/aospa
+rm -rf build
+git clone https://github.com/hbarsaiyan/android_build
+cd hardware
+rm -rf libhardware/ ril/
+cd ~/aospa
