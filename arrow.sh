@@ -8,8 +8,8 @@ git clone https://github.com/RenanQueiroz/android_kernel_motorola_msm8226 kernel
 cd /datadrive/arrow
 rm -rf frameworks/base
 git clone https://github.com/hbarsaiyan/android_frameworks_base-1 frameworks/base
-rm -rf hardware/qcom/display-caf
-git clone https://github.com/hbarsaiyan/android_hardware_qcom_display-1 -b lineage-17.1-caf-msm8974 hardware/qcom/display-caf
+rm -rf hardware/qcom/display-caf/msm8974
+git clone https://github.com/hbarsaiyan/android_hardware_qcom_display-1 -b lineage-17.1-caf-msm8974 hardware/qcom/display-caf/msm8974
 #rm -rf hardware/qcom/media-caf
 #git clone https://github.com/hbarsaiyan/android_hardware_qcom_media -b lineage-17.1-caf-msm8974 hardware/qcom/media-caf
 ccache -M 30G
