@@ -10,8 +10,8 @@ rm -rf frameworks/base
 git clone https://github.com/hbarsaiyan/android_frameworks_base-1 frameworks/base
 rm -rf hardware/qcom/display-caf
 git clone https://github.com/hbarsaiyan/android_hardware_qcom_display-1 -b lineage-17.1-caf-msm8974 hardware/qcom/display-caf
-rm -rf hardware/qcom/media-caf
-git clone https://github.com/hbarsaiyan/android_hardware_qcom_media -b lineage-17.1-caf-msm8974 hardware/qcom/media-caf
+#rm -rf hardware/qcom/media-caf
+#git clone https://github.com/hbarsaiyan/android_hardware_qcom_media -b lineage-17.1-caf-msm8974 hardware/qcom/media-caf
 ccache -M 30G
 export USE_CCACHE=1
 export CCACHE_EXEC=$(command -v ccache)
