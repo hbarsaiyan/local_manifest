@@ -2,7 +2,7 @@ cd /drive/sos
 repo init -u git://github.com/SuperiorOS/manifest.git -b ten --depth=1
 repo sync -c -f --force-sync --no-tags --no-clone-bundle -j$(nproc --all) --optimized-fetch --prune
 git clone https://github.com/hbarsaiyan/android_device_motorola_falcon -b superior device/motorola/falcon
-git clone https://github.com/hbarsaiyan/android_device_motorola_msm8226-common -b colt device/motorola/msm8226-common
+git clone https://github.com/hbarsaiyan/android_device_motorola_msm8226-common -b superior device/motorola/msm8226-common
 git clone https://github.com/hbarsaiyan/proprietary_vendor_motorola -b superior vendor/motorola
 git clone https://github.com/RenanQueiroz/android_kernel_motorola_msm8226 kernel/motorola/msm8226
 cd /drive/sos
