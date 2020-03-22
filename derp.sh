@@ -32,3 +32,6 @@ git remote add dq https://github.com/saikat0511/platform_packages_apps_DerpQuest
 git fetch dq
 git cherry-pick --strategy=recursive -X theirs 2e33801069ece6a22a5179374b5e2c8384565941
 cd -
+export USE_CCACHE=1
+export LC_ALL=C
+export DERP_BUILD_ZIP_TYPE=VANILLA && rm -rf vendor/gapps
