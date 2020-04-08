@@ -1,3 +1,13 @@
+sudo apt update && sudo apt upgrade
+sudo umount /dev/sdb1
+sudo mkfs -t ext4 /dev/sdb1
+sudo mount /dev/sdb1 /mnt
+sudo chmod -R 777 /mnt
+git clone https://github.com/akhilnarang/scripts
+cd scripts
+bash se*/android_*
+cd /mnt
+
 repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b c10 --depth=1
 repo sync --force-sync -f -c --no-clone-bundle --no-tags -j4
 git clone https://github.com/magicxavi/device_xiaomi_kenzo -b havoc3.0 device/xiaomi/kenzo
